@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 98%;
+    --warning: 32 95% 44%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.65rem;
+    --chart-1: 221 83% 53%;
+    --heat-0: 240 4.8% 93%;
+    --heat-1: 141 60% 80%;
+    --heat-2: 141 55% 60%;
+    --heat-3: 141 60% 42%;
+    --heat-4: 141 70% 28%;
+    color-scheme: light;
+  }
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 8% 6%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 8% 6%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 72% 62%;
+    --destructive-foreground: 0 0% 98%;
+    --warning: 38 92% 56%;
+    --border: 240 3.7% 17%;
+    --input: 240 3.7% 20%;
+    --ring: 240 4.9% 83.9%;
+    --chart-1: 217 91% 62%;
+    --heat-0: 240 4% 14%;
+    --heat-1: 141 50% 18%;
+    --heat-2: 141 55% 28%;
+    --heat-3: 141 60% 40%;
+    --heat-4: 141 70% 55%;
+    color-scheme: dark;
+  }
+  * { @apply border-border; }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+  }
+  h1, h2, h3 { text-wrap: balance; }
+}
+
+/* Rendered README */
+.markdown { @apply text-[14.5px] leading-relaxed; overflow-wrap: anywhere; min-width: 0; }
+.markdown > *:first-child { margin-top: 0; }
+.markdown h1, .markdown h2 { @apply border-b pb-1.5; }
+.markdown h1 { @apply mb-3 mt-2 text-2xl font-semibold; }
+.markdown h2 { @apply mb-3 mt-7 text-xl font-semibold; }
+.markdown h3 { @apply mb-2 mt-5 text-base font-semibold; }
+.markdown h4, .markdown h5, .markdown h6 { @apply mb-2 mt-4 font-semibold; }
+.markdown p, .markdown ul, .markdown ol, .markdown blockquote, .markdown pre, .markdown table { @apply my-3; }
+.markdown ul { @apply list-disc pl-6; }
+.markdown ol { @apply list-decimal pl-6; }
+.markdown a { @apply text-chart-1 underline-offset-2 hover:underline; }
+.markdown code { @apply rounded bg-muted px-1.5 py-0.5 font-mono text-[85%]; }
+.markdown pre { @apply max-w-full overflow-x-auto rounded-lg bg-muted p-4; }
+.markdown pre code { @apply bg-transparent p-0; }
+.markdown blockquote { @apply border-l-4 pl-4 text-muted-foreground; }
+.markdown table { @apply block max-w-full overflow-x-auto border-collapse; }
+.markdown th, .markdown td { @apply border px-3 py-1.5; }
+.markdown img { @apply inline-block h-auto max-w-full; }
+.markdown hr { @apply my-6; }
+.markdown .anchor, .markdown .octicon { display: none; }
